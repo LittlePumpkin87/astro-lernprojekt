@@ -35,5 +35,7 @@ Astro-Tooling-Details (Background-Dev-Server, Doku-Links) stehen in [AGENTS.md](
 - **Vor jeder Session die letzten zwei Einträge in [docs/JOURNAL.md](docs/JOURNAL.md) lesen.**
 - [docs/COMPARE.md](docs/COMPARE.md) lebt **nur in diesem Repo** und sammelt den
   Systemvergleich über alle drei Projekte. Nach jeder Session um 1–3 Zeilen ergänzen.
+- **Git macht Jennifer selbst** — ich führe kein `commit`/`push` aus. Lesende Befehle
+  (`status`, `log`, `diff`) sind okay.
 - Eine Session gilt nur als fertig mit: sichtbarem Ergebnis im Browser + JOURNAL-Eintrag +
   Commit.

@@ -1,43 +1,52 @@
-# Astro Starter Kit: Minimal
+# astro-lernprojekt
 
-```sh
-npm create astro@latest -- --template minimal
+Statische Content-Site mit Astro — Content Collections, MDX, handgeschriebenes CSS.
+
+Dies ist eines von **drei Lernprojekten**, die dieselbe fiktive Agentur-Website
+„Pumpkin Studio" umsetzen: einmal in TYPO3, einmal als WordPress-Block-Theme, einmal in
+Astro. Gleiche Seiten, gleiche Inhaltstypen, gleiche Design-Tokens — drei völlig
+verschiedene Wege dorthin. Die gemeinsame, eingefrorene Spezifikation liegt in
+[docs/SPEC.md](docs/SPEC.md).
+
+| Repo | System |
+|---|---|
+| [astro-lernprojekt](https://github.com/LittlePumpkin87/astro-lernprojekt) | Astro (SSG) |
+| [typo3-lernprojekt](https://github.com/LittlePumpkin87/typo3-lernprojekt) | TYPO3 v13.4 |
+| [wp-lernprojekt](https://github.com/LittlePumpkin87/wp-lernprojekt) | WordPress Block-Theme (FSE) |
+
+**Der Systemvergleich lebt in diesem Repo:** [docs/COMPARE.md](docs/COMPARE.md) — eine
+wachsende Tabelle, die dasselbe Konzept in allen drei Systemen nebeneinanderstellt
+(Layout, wiederverwendbare Module, Design-Tokens, Inhaltsmodell, Relationen, Bilder).
+
+## Stack
+
+Astro **7.2** · Static Site Generation · Content Collections + MDX · Node 24 ·
+`@astrojs/sitemap`
+
+**Bewusst nicht:** kein Tailwind, kein UI-Framework, kein SSR-Adapter. Handgeschriebenes
+CSS hält die drei Sites optisch vergleichbar — und darum geht es hier.
+
+## Lokal starten
+
+```bash
+git clone git@github.com:LittlePumpkin87/astro-lernprojekt.git
+cd astro-lernprojekt
+npm install
+npm run dev        # http://localhost:4321
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Befehl | Wirkung |
+|---|---|
+| `npm run dev` | Dev-Server mit Hot Reload |
+| `npm run build` | Produktions-Build nach `dist/` |
+| `npm run preview` | Build lokal ausliefern |
 
-## 🚀 Project Structure
+Die Seite wird unter einem Unterpfad ausgeliefert (`base: '/astro-lernprojekt'`). Deshalb
+vor jedem Deploy `build` **und** `preview` prüfen — der Dev-Server läuft auf `/` und
+verdeckt kaputte Pfade.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Stand
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Setup abgeschlossen: Projekt, Integrationen und Deploy-Konfiguration stehen. Als Nächstes
+die Content Collections mit Zod-Schemas, danach Layout und Startseiten-Sektionen nach
+[docs/SPEC.md](docs/SPEC.md).
