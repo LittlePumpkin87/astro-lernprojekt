@@ -1,0 +1,95 @@
+
+:root {
+  /* COLORS */
+
+  --color-ink: #1a1614;
+  --color-paper: #fdfbf7;
+  --color-pumpkin: #e8590c;
+  --color-muted: #6b625c;
+  --color-line: #e5ded5;
+
+  /* SPACING */
+
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-40: 2.5rem;
+  --spacing-64: 4rem;
+  --spacing-96: 6rem;
+
+  /* FONT SIZES */
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.5rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 3rem;
+  --font-size-xxl: 4rem;
+
+  /* LAYOUT */
+
+  --size-content: 44rem;
+  --size-wide: 72rem;
+
+  /* RADIUS */
+
+  --radius-sm: 0.25rem;
+  --radius-lg: 1rem;
+
+  /* FONT FAMILY */
+
+  --font-heading: "Berkshire Swash";
+  --font-body: "Signika Negative";
+}
+
+/* RESETS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-paper);
+  font-family: var(--font-body);
+  color: var(--color-ink);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  &:focus-visible {
+    outline: 2px solid var(--color-pumpkin);
+    outline-offset: var(--spacing-4);
+  }
+  &:visited {
+    color: inherit;
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  &:focus-visible {
+    outline: 2px solid var(--color-pumpkin);
+    outline-offset: var(--spacing-4);
+  }
+  &:hover {
+    color: var(--color-pumpkin);
+    background-color: var(--color-ink);
+    border: 2px solid var(--color-pumpkin);
+  }
+}
