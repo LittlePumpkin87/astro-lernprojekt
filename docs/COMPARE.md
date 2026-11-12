@@ -11,7 +11,7 @@
 |---|---|---|---|
 | Page layout | Fluid `Layouts/` | `parts/` + `templates/` | `layouts/*.astro` + `<slot />` |
 | Reusable module | Content element | Block (`block.json`) | `.astro` component |
-| Design tokens | TypoScript / site set | `theme.json` | CSS custom properties |
+| Design tokens | SCSS map | `theme.json` | CSS custom properties |
 | Content model | TCA / database | Post types + meta | Zod schema |
 | Relation | inline/select | Post meta / term | `reference()` |
 | Images | FAL + cropVariants | Media library | `astro:assets` |
@@ -33,7 +33,7 @@
   `<head>` and no warning.
 
 - **Font handling is the first clear win for Astro.** Four lines of config, and Astro
-  downloads the files at build time, self-hosts them, hashes the file names for cache
+  picks up the local files, self-hosts them, hashes the file names for cache
   busting, sets the base path, and derives a metrically adjusted fallback face from the
   generic family to prevent layout shift. In TYPO3 every one of those points is manual work;
   `theme.json` can do the declaration, but not the optimisation.

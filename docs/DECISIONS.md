@@ -19,8 +19,8 @@ files at build time. An SSR adapter would add a runtime to operate and pay for, 
 for a capability the specification does not ask for.
 
 **Consequence:** This is the only one of the three builds that can be deployed cheaply, and
-therefore the only one that is deployed at all — GitHub Pages via Actions. TYPO3 and
-WordPress stay local.
+therefore the only one that will be deployed at all — GitHub Pages via Actions (planned;
+the workflow does not exist yet). TYPO3 and WordPress stay local.
 
 ---
 

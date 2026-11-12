@@ -40,7 +40,8 @@ reusable modules, design tokens, content model, relations, images).
 * **Hand-written CSS:** No Tailwind, no UI framework. Custom properties carry the design
   tokens, which keeps this build visually comparable to the other two.
 * **Static output:** The build produces plain files, which is why this is the only one of
-  the three that gets deployed at all.
+  the three meant to be deployed (GitHub Pages; `site` and `base` are configured, the
+  Actions workflow does not exist yet).
 
 ---
 
@@ -80,8 +81,9 @@ astro-lernprojekt/
 │   ├── COMPARE.md       The cross-system comparison — lives here
 │   ├── DECISIONS.md     Design decisions and rejected alternatives
 │   └── JOURNAL.md       Session log
+├── public/              Static files served as-is (favicons)
 └── src/
-    ├── content/         Content collections (Zod schemas)
+    ├── fonts/           Local font files for the font provider
     ├── layouts/         BaseLayout.astro — the shared page skeleton
     ├── pages/           File-based routing
     └── styles/          global.css — design tokens as custom properties
@@ -110,11 +112,12 @@ such capability either. The write-up is
 Tracked as issues on the shared
 [Pumpkin Studio board](https://github.com/users/LittlePumpkin87/projects/3).
 
-* [x] Project setup, integrations, deploy configuration
+* [x] Project setup, integrations, `site`/`base` for GitHub Pages
+* [ ] Deploy workflow (GitHub Actions → GitHub Pages)
 * [x] Global CSS, resets, font configuration
 * [ ] 🐛 [Fonts do not load](https://github.com/LittlePumpkin87/astro-lernprojekt/issues/10) — font tokens have no `@font-face` definition
 * [ ] [Base layout](https://github.com/LittlePumpkin87/astro-lernprojekt/issues/2) — fill `BaseLayout.astro`, move the skeleton out of `index.astro`
-* [ ] [Design tokens as CSS custom properties](https://github.com/LittlePumpkin87/astro-lernprojekt/issues/1)
+* [ ] [Design tokens as CSS custom properties](https://github.com/LittlePumpkin87/astro-lernprojekt/issues/1) — colours, spacing, sizes and radius already in `global.css`
 * [ ] [Content types](https://github.com/LittlePumpkin87/astro-lernprojekt/issues/3): service, blog post, author with a relation
 * [ ] [Home page sections](https://github.com/LittlePumpkin87/astro-lernprojekt/issues/6)
 * [ ] [Text/image section with a left/right switch](https://github.com/LittlePumpkin87/astro-lernprojekt/issues/7) — the comparison anchor
